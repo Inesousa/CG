@@ -76,6 +76,7 @@ public class AttachPlayer : MonoBehaviour
             platRotDiff = platRotNow - platRotBefore;
 
             player.transform.position = RotatePointAroundPivot(player.transform.position, parent.position, platRotDiff);
+            Camera.main.transform.position = RotatePointAroundPivot(player.transform.position, parent.position, platRotDiff);
 
             platRotBefore = new Vector3(parent.eulerAngles.x, parent.eulerAngles.y, parent.eulerAngles.z);
 

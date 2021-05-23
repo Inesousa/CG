@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d847841e0c8dfd8418104abf7697f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 1
   currentHealth: 0
   thePlayerWater: {fileID: 2074332202}
   thePlayerFire: {fileID: 0}
@@ -1572,7 +1572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909297282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.681175, y: 0, z: 48.569443}
+  m_LocalPosition: {x: 57.1, y: 0, z: 44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2081745339}
@@ -1805,7 +1805,7 @@ PrefabInstance:
     - target: {fileID: 720846585336444993, guid: fa5ba03d5d8f86d4585a4464898f0801,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 720846585336444993, guid: fa5ba03d5d8f86d4585a4464898f0801,
         type: 3}
@@ -1815,7 +1815,7 @@ PrefabInstance:
     - target: {fileID: 720846585336444993, guid: fa5ba03d5d8f86d4585a4464898f0801,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 720846585336444993, guid: fa5ba03d5d8f86d4585a4464898f0801,
         type: 3}

@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -8859,6 +8859,7 @@ GameObject:
   - component: {fileID: 1046036404}
   - component: {fileID: 1046036403}
   - component: {fileID: 1046036406}
+  - component: {fileID: 1046036407}
   m_Layer: 0
   m_Name: Portal Home
   m_TagString: Untagged
@@ -13613,6 +13614,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7897c25b7aea84e963413a9a3aa602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &1046036407
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046036402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1110110780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8369159609348405974, guid: e451d8eaa3f4334438318daabb3d4414,
@@ -16560,7 +16574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d847841e0c8dfd8418104abf7697f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 5
   currentHealth: 0
   thePlayerWater: {fileID: 0}
   thePlayerFire: {fileID: 0}

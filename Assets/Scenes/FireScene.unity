@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -10136,7 +10136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d847841e0c8dfd8418104abf7697f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 5
   currentHealth: 0
   thePlayerWater: {fileID: 0}
   thePlayerFire: {fileID: 986389334}
@@ -12300,6 +12300,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7883365261580954971, guid: 475ebe766ad451546aa165b62b1b2ea4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 86f3809dcc8e27f489714c890064a294, type: 2}
     - target: {fileID: 7883365261580954974, guid: 475ebe766ad451546aa165b62b1b2ea4,
         type: 3}
       propertyPath: m_Controller
