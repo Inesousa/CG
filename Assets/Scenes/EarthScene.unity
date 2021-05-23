@@ -16560,7 +16560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d847841e0c8dfd8418104abf7697f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 3
   currentHealth: 0
   thePlayerWater: {fileID: 0}
   thePlayerFire: {fileID: 0}
