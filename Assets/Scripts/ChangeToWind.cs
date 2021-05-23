@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ChangeToWind : MonoBehaviour {
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other) {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
     }
 
 }

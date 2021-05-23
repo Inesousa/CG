@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour{
     public Text goldText;
 
     public void Start() {
-
+        //currentGold = 9;
     }
 
     public void Update() {
@@ -20,12 +20,14 @@ public class GameManager : MonoBehaviour{
         currentGold += goldToAdd;
         goldText.text = "Gold: " + currentGold;
 
-        if (currentGold == 9) {
-            FindObjectOfType<DeploySpecial>().SpawnEnemy();
+        if (SceneManager.GetActiveScene().name == "Water" ) {
+            if (currentGold == 9) {
+                FindObjectOfType<DeploySpecial>().SpawnEnemy();
+            }
         }
-
         if (currentGold == 10) {
             FindObjectOfType<DeploySpecial>().SpawnCheckPoint();
         }
+
     }
 }

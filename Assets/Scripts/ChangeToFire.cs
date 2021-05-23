@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ChangeToFire : MonoBehaviour {
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other) {
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 }

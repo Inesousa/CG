@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
-    public PlayerControllerWater thePlayer;
+    public PlayerControllerWater thePlayerWater;
+    public PlayerControllerFire thePlayerFire;
+    public PlayerController thePlayerEarth;
+    public PlayerControllerAir thePlayerAir;
+
+
     public CharacterController theCharacter;
     public GameObject player;
     public Text healthText;
@@ -31,7 +37,24 @@ public class HealthManager : MonoBehaviour {
     void Start() {
         currentHealth = maxHealth;
         healthText.text = "Health: " + currentHealth;
-        respawnPoint = thePlayer.transform.position;
+
+        if (SceneManager.GetActiveScene().name == "Water" || SceneManager.GetActiveScene().name == "MainScene") {
+
+        respawnPoint = thePlayerWater.transform.position;
+        }
+
+        if (SceneManager.GetActiveScene().name == "FireScene") {
+            respawnPoint = thePlayerFire.transform.position;
+        }
+
+        if (SceneManager.GetActiveScene().name == "EarthScene") {
+            respawnPoint = thePlayerEarth.transform.position;
+        }
+
+        if (SceneManager.GetActiveScene().name == "AirScene") {
+            respawnPoint = thePlayerAir.transform.position;
+        }
+        
     }
 
     // Update is called once per frame
@@ -90,7 +113,22 @@ public class HealthManager : MonoBehaviour {
             if (currentHealth <= 0) {
                 Respawn();
             } else {
-                thePlayer.KnockBack(direction);
+                if (SceneManager.GetActiveScene().name == "Water") {
+                    thePlayerWater.KnockBack(direction);
+                }
+                if (SceneManager.GetActiveScene().name == "FireScene") {
+                    thePlayerFire.KnockBack(direction);
+
+                }
+
+                if (SceneManager.GetActiveScene().name == "EarthScene") {
+                    thePlayerEarth.KnockBack(direction);
+                }
+
+                if (SceneManager.GetActiveScene().name == "AirScene") {
+                    thePlayerAir.KnockBack(direction);
+                }
+
                 invincibilityCounter = invincibilityLength;
 
                 SkinnedMeshRenderer[] playerRenderers = FindObjectsOfType<SkinnedMeshRenderer>();
@@ -111,25 +149,64 @@ public class HealthManager : MonoBehaviour {
     }
 
     public IEnumerator RespawnCo() {
+
         isRespawning = true;
-        thePlayer.gameObject.SetActive(false);
-        Instantiate(deathEffect, thePlayer.transform.position, thePlayer.transform.rotation);
+        if (SceneManager.GetActiveScene().name == "Water") {
+            thePlayerWater.gameObject.SetActive(false);
+            Instantiate(deathEffect, thePlayerWater.transform.position, thePlayerWater.transform.rotation);
+            yield return new WaitForSeconds(respawnLength);
+            isFadeToBlack = true;
+            yield return new WaitForSeconds(waitForFade);
+            isFadeToBlack = false;
+            isFadeFromBlack = true;
+            isRespawning = false;
+            thePlayerWater.transform.position = respawnPoint;
+            thePlayerWater.gameObject.SetActive(true);
+            thePlayerWater.transform.position = respawnPoint;
+        }
+        if (SceneManager.GetActiveScene().name == "FireScene") {
+            thePlayerFire.gameObject.SetActive(false);
+            Instantiate(deathEffect, thePlayerFire.transform.position, thePlayerFire.transform.rotation);
+            yield return new WaitForSeconds(respawnLength);
+            isFadeToBlack = true;
+            yield return new WaitForSeconds(waitForFade);
+            isFadeToBlack = false;
+            isFadeFromBlack = true;
+            isRespawning = false;
+            thePlayerFire.transform.position = respawnPoint;
+            thePlayerFire.gameObject.SetActive(true);
+            thePlayerFire.transform.position = respawnPoint;
+        }
 
-        yield return new WaitForSeconds(respawnLength);
+        if (SceneManager.GetActiveScene().name == "EarthScene") {
+            thePlayerEarth.gameObject.SetActive(false);
+            Instantiate(deathEffect, thePlayerEarth.transform.position, thePlayerEarth.transform.rotation);
+            yield return new WaitForSeconds(respawnLength);
+            isFadeToBlack = true;
+            yield return new WaitForSeconds(waitForFade);
+            isFadeToBlack = false;
+            isFadeFromBlack = true;
+            isRespawning = false;
+            thePlayerEarth.transform.position = respawnPoint;
+            thePlayerEarth.gameObject.SetActive(true);
+            thePlayerEarth.transform.position = respawnPoint;
+        }
 
-        isFadeToBlack = true;
+        if (SceneManager.GetActiveScene().name == "AirScene") {
+            thePlayerAir.gameObject.SetActive(false);
+            Instantiate(deathEffect, thePlayerAir.transform.position, thePlayerAir.transform.rotation);
+            yield return new WaitForSeconds(respawnLength);
+            isFadeToBlack = true;
+            yield return new WaitForSeconds(waitForFade);
+            isFadeToBlack = false;
+            isFadeFromBlack = true;
+            isRespawning = false;
+            thePlayerAir.transform.position = respawnPoint;
+            thePlayerAir.gameObject.SetActive(true);
+            thePlayerAir.transform.position = respawnPoint;
+        }
 
-        yield return new WaitForSeconds(waitForFade);
-
-        isFadeToBlack = false;
-        isFadeFromBlack = true;
-        
-        isRespawning = false;
-        thePlayer.transform.position = respawnPoint;
-
-        thePlayer.gameObject.SetActive(true);
-
-        thePlayer.transform.position = respawnPoint;
+;
 
         currentHealth = maxHealth;
         healthText.text = "Health: " + currentHealth;

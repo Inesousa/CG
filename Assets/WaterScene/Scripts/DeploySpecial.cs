@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeploySpecial : MonoBehaviour
 {
@@ -29,6 +30,24 @@ public class DeploySpecial : MonoBehaviour
 
     public void SpawnCheckPoint() {
         GameObject cpoint = Instantiate(cp) as GameObject;
-        cpoint.transform.position = new Vector3(-15f, 3f, -20f);
+
+        if (SceneManager.GetActiveScene().name == "Water" ) {
+            cpoint.transform.position = new Vector3(-15f, 3f, -20f);
+        }
+
+        if (SceneManager.GetActiveScene().name == "FireScene") {
+            cpoint.transform.position = new Vector3(28.47f, 25.12f, -5.64f);
+
+        }
+
+        if (SceneManager.GetActiveScene().name == "EarthScene") {
+            cpoint.transform.position = new Vector3(8.55f, 28.79f, 31.5f);
+
+        }
+
+        if (SceneManager.GetActiveScene().name == "AirScene") {
+            cpoint.transform.position = new Vector3(-35f, 4.462f, 30.35f);
+
+        }
     }
 }

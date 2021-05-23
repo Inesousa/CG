@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Water.unity
     guid: b7c3c1b12d019fc4dba18e706562fe59
   - enabled: 1
+    path: Assets/Scenes/FireScene.unity
+    guid: b6b5c70a5b37b184898c9f5b9352fd39
+  - enabled: 1
+    path: Assets/Scenes/EarthScene.unity
+    guid: b6b056e917a151048abed18f6d91fc05
+  - enabled: 1
     path: Assets/Scenes/AirScene.unity
-    guid: 1618d9b238bb13c4096f80f4483cd216
+    guid: a15f5dbc231324945a65eb28e7b61862
   m_configObjects: {}

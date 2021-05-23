@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Destroy Effects (particle System)
 public class DestroyOverTime : MonoBehaviour
 {
 
