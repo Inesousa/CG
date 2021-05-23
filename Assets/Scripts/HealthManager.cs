@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour {
     public int maxHealth;
     public int currentHealth;
-    public PlayerController thePlayer;
+    public PlayerControllerWater thePlayer;
     public CharacterController theCharacter;
     public GameObject player;
     public Text healthText;

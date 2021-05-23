@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
-public class PlayerController : MonoBehaviour{
+public class PlayerControllerWater : MonoBehaviour{
     public float moveSpeed;
     public float jumpForce;
     public int jumpCount = 0;
