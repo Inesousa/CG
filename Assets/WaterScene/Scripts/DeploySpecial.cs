@@ -41,7 +41,7 @@ public class DeploySpecial : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name == "AirScene") {
-            cpoint.transform.position = new Vector3(-35f, 4.462f, 30.35f);
+            cpoint.transform.position = new Vector3(35f, 3.8f, 29.5f);
 
         }
     }
