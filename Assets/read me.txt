@@ -1,6 +1,17 @@
-Hello and thank you for your purchase.
+To play the game:
 
-There are twelve different ground textures which I have added to a standard shader.
-Ive set the tiling to three and you can change it in the Inspector.
+Go to each scene on Assets -> Scenes and wait for the lighting to bake;
+Go to the MainScene on Assets -> Scenes;
+Click Play;
+See the instructions to know the keys for the abilities;
+Choose the level you want to play by walking to its his scene point (water - blue, air - white, earth - brown, red - fire).
 
-All the texture images are 1024*1024 TGA
+
+
+Work developed by:
+
+Maria Inês Sousa, 201505100
+João Ferreira, 201404233
+Alexandre Vieira, 201605999
+João Monteiro, 201605221
+
