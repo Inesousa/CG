@@ -25,14 +25,14 @@ public class DeploySpecial : MonoBehaviour
     }
     public void SpawnCoin() {
         GameObject coin = Instantiate(coinSpecialPrefab) as GameObject;
-        coin.transform.position = new Vector3(0f, 3f, 0f);
+        coin.transform.position = new Vector3(0f, 5f, 0f);
     }
 
     public void SpawnCheckPoint() {
         GameObject cpoint = Instantiate(cp) as GameObject;
 
         if (SceneManager.GetActiveScene().name == "Water" ) {
-            cpoint.transform.position = new Vector3(-15f, 3f, -20f);
+            cpoint.transform.position = new Vector3(-15f, 5f, -20f);
         }
 
         if (SceneManager.GetActiveScene().name == "FireScene") {
